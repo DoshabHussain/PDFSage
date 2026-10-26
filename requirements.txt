@@ -1,0 +1,9 @@
+flask
+pymupdf
+requests
+numpy
+scikit-learn
+sentence-transformers
+
+werkzeug>=3.1.9
+urllib3>=2.7.0

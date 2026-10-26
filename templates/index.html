@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PDFSage</title>
+<link rel="stylesheet" href="/static/style.css"></head><body><div class="wrap">
+<header><div><h1>📄 PDFSage</h1><div class="sub">NLP-based intelligent PDF assistant · runs 100% locally</div></div>
+<div class="pill"><span class="dot" id="dot"></span><span id="st">checking…</span><select id="model"></select></div></header>
+
+<div class="card"><div id="drop"><div style="font-size:34px">⬆️</div><b>Drop a PDF here or click to browse</b>
+<div class="sub">Scanned PDFs are read with OCR (PyMuPDF + Tesseract)</div></div>
+<input type="file" id="file" accept=".pdf" hidden><div class="stats" id="stats"></div><div class="err" id="uerr"></div></div>
+
+<div class="tabs" id="tabs"></div>
+<div class="card">
+<div class="panel on" id="p-summary"><div class="row"><button class="btn" data-run="summary">Generate summary</button></div><div id="o-summary" class="empty">No summary yet.</div></div>
+<div class="panel" id="p-questions"><div class="row"><button class="btn" data-run="questions">Generate questions</button><label class="sub">Count <input type="number" id="nq" value="6" min="2" max="12" style="width:60px"></label></div><div id="o-questions" class="empty">No questions yet.</div></div>
+<div class="panel" id="p-mcqs"><div class="row"><button class="btn" data-run="mcqs">Generate MCQs</button><label class="sub">Count <input type="number" id="nm" value="4" min="2" max="8" style="width:60px"></label></div><div id="o-mcqs" class="empty">No MCQs yet.</div></div>
+<div class="panel" id="p-chat"><div id="log"></div><div class="row" style="margin:0"><input type="text" id="qin" placeholder="Ask something about the PDF…" style="flex:1;padding:11px"><button class="btn" id="send">Send</button></div></div>
+<div class="err" id="err"></div></div>
+</div>
+<script src="/static/app.js"></script></body></html>
